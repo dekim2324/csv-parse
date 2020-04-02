@@ -14,15 +14,14 @@ fs.readFile(inputFile2, 'utf8', (err, data) => {
             debugger;
             let indexOfN;
 
-            // Check which index the nNumber is located and assign to indexOfN
-            csvRow[1].forEach( (element, i) => {
-                let digits = element.match(/\d+/g);
-                
-                if (digits && digits[0].length === 5) {
-                    indexOfN = i;
-                }
-                
-        });   
+        for(let i = 0; i < csvRow[1].length; i++) {
+            let digits = csvRow[1][i].match(/\d+/g);
+            
+            if (digits && digits[0].length === 5) {
+                indexOfN = i;
+                break;
+            }
+        }
 
         console.log(indexOfN);
 
