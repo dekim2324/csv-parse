@@ -7,6 +7,7 @@ var inputFile2 = 'file2.txt';
 fs.readFile(inputFile2, 'utf8', (err, data) => {
     const finalData = [];
  
+    // Turn csv into column arrays
     csv({ noheader: true, output: "csv" })
         .fromString(data)
         .then((csvRow)=> { 
