@@ -24,8 +24,6 @@ fs.readFile(inputFile2, 'utf8', (err, data) => {
             }
         }
 
-        console.log(indexOfN);
-
         // loop starting from ind = 1
         // at each element, push index of indexOfN to finalData array
         for(let i = 1; i < csvRow.length; i++) {
